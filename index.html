@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Déclaration pour Alicia 🌈</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://files.catbox.moe/zr04sl.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      backdrop-filter: brightness(0.6);
+    }
+
+    .container {
+      background: linear-gradient(135deg, #ff66cc, #ffcc00, #66ff66, #66ccff, #9966ff);
+      background-size: 300% 300%;
+      animation: rainbow 10s ease infinite;
+      margin-top: 40px;
+      padding: 30px 20px;
+      border-radius: 15px;
+      max-width: 90%;
+      width: 500px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    @keyframes rainbow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .heart {
+      font-size: 80px;
+      animation: heartbeat 1.2s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    select, button {
+      padding: 10px 16px;
+      margin: 10px 5px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    select {
+      background: #fff;
+      color: #333;
+    }
+
+    button {
+      background: #ff007f;
+      color: white;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 95%;
+        padding: 20px;
+      }
+
+      .heart {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌟 Bienvenue Alicia 🌟</h1>
+    <p>
+      Ce site a été créé avec amour par <strong>Muzan Sigma</strong> ❤️ pour déclarer sa flamme à la belle, radieuse,
+      incroyable, magique et envoûtante <strong>Alicia</strong>, alias la sorcière la plus irrésistible du multivers.
+    </p>
+    <p>Que ce soit ton rire, ton regard, ta folie ou ton charme, tout en toi est un sort que je ne veux jamais briser ✨</p>
+    
+    <div class="heart">❤️</div>
+
+    <h2>🎶 Choisis ta chanson d’amour :</h2>
+    <select id="songSelect">
+      <option value="https://files.catbox.moe/typbw8.mp3">Mon Amour – Slimane</option>
+      <option value="https://files.catbox.moe/dn40r8.mp3">Âme Sœur – Souf ft. Julie</option>
+    </select>
+    <button onclick="playSong()">▶️ Écouter</button>
+    <audio id="audioPlayer" controls style="display:none;"></audio>
+
+    <div class="footer">
+      Ton chéri t’adore 💋 — Contact : <a href="https://t.me/jarixpro1" target="_blank">t.me/jarixpro1</a>
+    </div>
+  </div>
+
+  <script>
+    function playSong() {
+      const audio = document.getElementById("audioPlayer");
+      const select = document.getElementById("songSelect");
+      audio.src = select.value;
+      audio.style.display = "block";
+      audio.play();
+    }
+  </script>
+</body>
+</html>
